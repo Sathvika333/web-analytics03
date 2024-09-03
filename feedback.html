@@ -69,7 +69,7 @@
 
     <div class="feedback-form">
         <h2>Feedback Form</h2>
-        <form action="#" method="post">
+        <form id="feedbackForm" method="post">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
@@ -92,6 +92,17 @@
             <button type="submit">Submit Feedback</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the default form submission
+
+            // Optionally handle form submission via AJAX here
+
+            // Redirect to the Thank You page
+            window.location.href = "https://yourwebsite.com/thank-you";
+        });
+    </script>
 
 </body>
 </html>
