@@ -93,16 +93,14 @@
         </form>
     </div>
 
-    <script>
-        document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-            event.preventDefault();  // Prevent the default form submission
+   <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
 
-            // Optionally handle form submission via AJAX here
-
-            // Redirect to the Thank You page
-            window.location.href = "thankyou.html";
-        });
-    </script>
+        // Redirect to the thank you page on GitHub
+        window.location.href = 'thankyou.html';
+    });
+</script>
 
 </body>
 </html>
