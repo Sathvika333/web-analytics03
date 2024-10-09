@@ -515,7 +515,19 @@ document.getElementById("select-item").addEventListener("click", function() {
 </script>
 
 
-     
+<button id="add-to-cart">Add to Cart</button>
+<script>
+document.getElementById("add-to-cart").addEventListener("click", function() {
+    gtag('event', 'add_to_cart', {
+        'item_id': 'item_001',
+        'item_name': 'Sample Smartphone',
+        'category': 'Electronics',
+        'price': 499.99,
+        'quantity': 1
+    });
+});
+</script>
+
 
 
 
