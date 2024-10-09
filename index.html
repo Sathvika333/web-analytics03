@@ -460,6 +460,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
 </script>
 
+
+    document.getElementById("submitFeedback").addEventListener("click", function() {
+    posthog.capture('Submit Feedback Clicked', {
+        form_name: document.querySelector('[name="name"]').value,
+        form_email: document.querySelector('[name="email"]').value,
+        form_rating: document.querySelector('[name="rating"]').value,
+        form_feedback: document.querySelector('[name="feedback"]').value
+    });
+});
+
+
       <style>
         /* Centering the link */
         .centered-link {
@@ -559,6 +570,15 @@ document.getElementById("start-checkout").addEventListener("click", function() {
         }]
     });
 });
+</script>
+
+
+    <script>
+    window.addEventListener('scroll', function() {
+        posthog.capture('Page Scrolled', {
+            scroll_position: window.scrollY
+        });
+    });
 </script>
 
 
